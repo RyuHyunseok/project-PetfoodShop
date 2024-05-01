@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 1280px;
+}
+
+#menu {
+	height: 300px;
+	width: 247px;
+	;
+}
+
+#main {
+	width: 1033px;
+}
+
+#menuHeader {
+	font-weight: bold;
+	letter-spacing: -0.07em;
+	font-size: 20px;
+	padding: 35px 0 9px 10px;
+}
+
+#hr1 {
+	margin-left: 0;
+	text-align: left;
+	width: 210px;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+#menuBody {
+	margin-top: 25px;
+	font-size: 14px;
+	letter-spacing: -0.09em;
+	color: rgb(83, 83, 83);
+	font-weight: bold;
+}
+
+.menuBox {
+	cursor: pointer;
+	width: fit-content; padding-left : 15px;
+	margin-bottom: 18px;
+	padding-left: 15px;
+}
+
+.menuClick {
+	padding-left: 20px;
+	margin-bottom: 18px;
+	color: #7fad39;
+}
+
+#memberBox {
+	border-radius: 5px;
+	border: 1px solid #b4b4b4;
+	width: 1000px;
+	height: 260px;
+	margin: 36px 0 0 23px;
+}
+
+#profileImg {
+	border-radius: 50%;
+	width: 146px;
+	margin: 48px 0 0 60px;
+}
+
+#profileBox {
+	position: relative;
+	left: 280px;
+	bottom: 146px;
+}
+
+#nameBox>span:nth-child(1) {
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: -0.03em;
+}
+
+#nameBox>span:nth-child(2) {
+	font-size: 20px;
+	color: #444444;
+	font-weight: 200;
+	padding-left: 5px;
+}
+
+.profile {
+	color: #b1b1b1;
+	margin-top: 4px;
+	font-size: 15px;
+	letter-spacing: -0.09em;;
+	position: relative;
+	top: 12px;
+	left: 6px;
+	display: flex;
+	flex-direction: row;
+}
+
+.profile>span:nth-child(1) {
+	width: 85px;
+}
+
+#address {
+	position: relative;
+	bottom: 20px;
+	margin-left: 83px;
+}
+
+#address>div>span:nth-child(1) {
+	margin-right: 6px;
+}
+
+#profileBox>div:nth-child(4) {
+	display: flex;
+	flex-direction: column;
+}
+
+#profileBox>div:nth-child(4)>div:nth-child(1) {
+	position: relative;
+	top: 8px;
+}
+
+#ordersBox>div:nth-child(1) {
+	margin-top: 50px;
+	padding-left: 20px;
+	font-weight: bold;
+	letter-spacing: -0.07em;
+}
+
+#ordersBox>div:nth-child(1)>span:nth-child(1) {
+	color: #313131;
+	font-size: 18px;
+}
+
+#ordersBox>div:nth-child(1)>span:nth-child(2) {
+	font-size: 12px;
+	color: #838383;
+	font-weight: lighter;
+	position: relative;
+	bottom: 1px;
+	left: 2px;
+}
+
+/* start */
+.order-list, .order-list-quantity {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.order-list li {
+	margin-bottom: 5px;
+}
+
+.order-list-quantity li {
+	margin-bottom: 5px;
+}
+
+#hr2 {
+	margin-left: 20px;
+	width: 350px;
+	border: 0;
+	height: 1px;
+	background-color: #dfdfdf;
+}
+
+a:link {
+	color: rgb(83, 83, 83);
+}
+
+a:visited {
+	color: rgb(83, 83, 83);
+}
+
+a:hover {
+	color: rgb(83, 83, 83);
+}
+
+a:active {
+	color: rgb(83, 83, 83);
+}
+
+
+
+
+
+
+
+
+
+
+
+table, tr, th, td {
+	width: 200px !important;
+	table-layout: fixed !important;
+}
+
+/* .container {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }  나중에 컨테이너 클래스가 있는 요소에 아이디 붙여서 그걸로 마진 없애기*/
+.shoping-cart {
+	padding-top: 35px !important;
+}
+
+.breadcrumb-section set-bg {
+	display: none !important;
+}

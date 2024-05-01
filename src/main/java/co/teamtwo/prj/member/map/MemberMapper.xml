@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.teamtwo.prj.member.map.MemberMapper">
+	<select id="memberSelect">
+		select * from customer where
+				del_yn = "n"
+			<if test="username != null">
+				and username = #{username} 
+			</if>
+			<if test="password != null">
+				and password = #{password}
+			</if>
+			<if test="name != null">
+				and name = #{name}
+			</if>
+			<if test="email != null">
+				and email = #{email}
+			</if>
+			<if test="tel != null">
+				and tel = #{tel}
+			</if>
+	</select>
+	<insert id="memberInsert">
+		insert into customer(username,password,name,tel,postcode,road_address,jibun_address,detail_address,email)
+			values(#{username},#{password},#{name},#{tel},#{postcode},#{roadAddress},#{jibunAddress},#{detailAddress},#{email})
+	</insert>
+	<update id="memberUpdate">
+		update customer set mod_date = now(), 
+			<if test="username != null">
+				username = #{username},
+			</if>
+			<if test="password != null">
+				password = #{password},
+			</if>
+			<if test="name != null">
+				name = #{name},
+			</if>
+			<if test="email != null">
+				email = #{email},
+			</if>
+			<if test="tel != null">
+				tel = #{tel},
+			</if>
+			<if test="postcode != null">
+				postcode = #{postcode},
+			</if>
+			<if test="roadAddress != null">
+				road_address = #{roadAddress},
+			</if>
+			<if test="jibunAddress != null">
+				jibun_address = #{jibunAddress},
+			</if>
+			<if test="detailAddress != null">
+				detail_address = #{detailAddress},
+			</if>
+				del_yn = 'n'
+			where username = #{username};
+	</update>
+	<delete id="memberDelete">
+		delete from customer where username = #{username}
+	</delete>
+	
+	<select id="MemberSelectList">
+		select * from customer
+	</select>
+	
+	<select id="memberSelect2" parameterType="co.teamtwo.prj.member.service.MemberVO">
+		select * from customer
+		where id = #{id}
+	</select>
+	
+	<select id="wishlistPagingList">
+		select * from product p where id in(
+		select product_id from wishlist w where customer_id = #{vo.customerId})
+		limit #{startNum},#{count};
+	</select>
+	
+	<select id="SelectWishList">
+		select * from wishlist where customer_id = #{customerId}
+		<if test="productId != 0">
+			and product_id = #{productId}
+		</if>
+	</select>
+</mapper>

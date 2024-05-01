@@ -1,0 +1,94 @@
+@charset "UTF-8";
+#card {
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 9px;
+    position: relative;
+    top: 110px;
+    width: 490px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-bottom: 300px;
+}
+#upper-side {
+    padding: 2em;
+    background-color: #7fad39;
+    display: block;
+    color: #fff;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+#checkmark {
+    font-weight: lighter;
+    fill: #fff;
+    margin: -2.5em auto 10px 20px;
+    position: relative;
+    left: 26px;
+  }
+#status {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    font-size: 23px;
+    margin-top: -0.2em;
+    margin-bottom: 0;
+}
+#lower-side {
+    padding: 2em 2em 5em 2em;
+    background: #fff;
+    display: block;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+#message {
+    font-size: 13px;
+    margin-top: 7px;
+    margin-bottom: 34px;
+    color: #757575;
+}
+.contBtn {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background: white;
+    color:  #7fad39;
+    border: 1px solid #7fad39;
+    margin: auto;
+    padding: 0.8em 3em;
+     border-radius: 25px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+#edit {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background: #ffffff;
+    background: #7fad39;
+    color: white;
+    margin: auto;
+    padding: 0.8em 3em;
+     border-radius: 25px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.contBtn:hover {
+    -webkit-box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.4);
+    -moz-box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.4);
+    box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.4);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+hr {
+  background:rgb(204, 204, 204);
+    height:1px;
+    border:0;
+    margin: 18px 0;
+}

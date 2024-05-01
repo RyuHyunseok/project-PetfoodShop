@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.teamtwo.prj.cart.service.CartMapper">
+	<select id="CartSelectList" parameterType="int">
+		SELECT * from cart c 
+		left join product p on c.product_id = p.id
+		where customer_id = #{id}
+	</select>
+	
+	<insert id="CartInsert" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		insert into cart (customer_id, product_id, product_name)
+		values (#{customerId}, #{productId}, (select name from product where id = #{productId}))
+	</insert>
+	
+	<delete id="CartDelete" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		delete from cart
+		where product_id = #{productId}
+	</delete>
+	
+	<update id="CartQuantityUpdate" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		update cart
+		set quantity = #{quantity}
+		where product_id = #{productId}
+	</update>
+
+	<select id="getProductIdByProductName" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		select product_id from cart
+		where product_name = #{productName}
+	</select>
+	
+	<select id="getQuantityByProductName" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		select quantity from cart
+		where product_name = #{productName}
+	</select>
+
+	<select id="existsProductInCart" resultType="int" parameterType="string">
+        select count * FROM cart WHERE product_name = #{productName}
+    </select>
+    
+    <select id="cartSelect">
+    	select * from cart c where customer_id = #{customerId} and product_id = #{productId}
+    </select>
+
+	<delete id="CartAllDelete" parameterType="int">
+		delete from cart
+		where customer_id = #{cart_customerId}
+	</delete>
+	
+	<select id="isProductInCart" parameterType="co.teamtwo.prj.cart.service.CartVO">
+		select count(*) from cart 
+		where customer_id = #{customerId} and product_id = #{productId}
+	</select>
+	
+	<select id="CartListCount" parameterType="int">
+		select count(*) from cart
+		where customer_id = #{id}
+	</select>
+	
+</mapper>

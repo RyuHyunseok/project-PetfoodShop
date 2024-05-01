@@ -1,0 +1,182 @@
+@charset "UTF-8";
+    body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 1280px;
+}
+
+#menu {
+	height: 300px;
+	width: 247px;
+	;
+}
+
+#main {
+	width: 1033px;
+}
+
+#menuHeader {
+	font-weight: bold;
+	letter-spacing: -0.07em;
+	font-size: 20px;
+	padding: 35px 0 9px 10px;
+}
+
+#hr1 {
+	margin-left: 0;
+	text-align: left;
+	width: 210px;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+#menuBody {
+	margin-top: 25px;
+	font-size: 14px;
+	letter-spacing: -0.09em;
+	color: rgb(83, 83, 83);
+	font-weight: bold;
+}
+
+.menuBox {
+	cursor: pointer;
+	width: fit-content; padding-left : 15px;
+	margin-bottom: 18px;
+	padding-left: 15px;
+}
+
+.menuClick {
+	padding-left: 20px;
+	margin-bottom: 18px;
+	color: #7fad39;
+}
+a:link {
+	color: rgb(83, 83, 83);
+}
+
+a:visited {
+	color: rgb(83, 83, 83);
+}
+
+a:hover {
+	color: rgb(83, 83, 83);
+}
+
+a:active {
+	color: rgb(83, 83, 83);
+}
+h4 {
+  letter-spacing: -0.1em;
+}
+table {
+  margin-top: 50px;
+	width: 100%;
+	border-top: 1px solid rgb(119, 119, 119);
+	font-size: 12px;
+	color: #424242;
+}
+
+tr {
+	border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+thead>tr>th {
+  color: #2c2c2c;
+	padding: 15px 0;
+	background-color: #fafaf9;
+	font-weight: 100;
+  text-align: center;
+}
+
+tbody>tr>td {
+	padding: 15px 0;
+  color: #838383;
+  text-align: center;
+}
+#ifNull {
+  height: 180px;
+}
+#buttonBox {
+	margin-top: 13px;
+}
+
+#buttonBox>button {
+  margin-right: 3px;
+  font-size: 13px;
+	background: #ffffff;
+	color: rgb(82, 82, 82);
+	border: 1px solid rgb(141, 141, 141);
+  letter-spacing: -0.07em;
+	padding: 10px 14px;
+}
+
+
+
+
+
+
+
+.checkbox-wrapper-21 .control {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .checkbox-wrapper-21 .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .checkbox-wrapper-21 .control__indicator {
+      position: absolute;
+    top: -14px;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    }
+    .checkbox-wrapper-21 .control:hover input ~ .control__indicator,
+    .checkbox-wrapper-21 .control input:focus ~ .control__indicator {
+      background: #e6e6e6;
+    }
+    .checkbox-wrapper-21 .control input:checked ~ .control__indicator {
+      background: #7fad39;
+    }
+    .checkbox-wrapper-21 .control:hover input:not([disabled]):checked ~ .control__indicator,
+    .checkbox-wrapper-21 .control input:checked:focus ~ .control__indicator {
+      background: #7fad39;
+    }
+    .checkbox-wrapper-21 .control input:disabled ~ .control__indicator {
+      background: #e6e6e6;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .checkbox-wrapper-21 .control__indicator:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+    .checkbox-wrapper-21 .control input:checked ~ .control__indicator:after {
+      display: block;
+    }
+    .checkbox-wrapper-21 .control--checkbox .control__indicator:after {
+      left: 7px;
+	top: 4px;
+	width: 6px;
+	height: 10px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+    }
+    .checkbox-wrapper-21 .control--checkbox input:disabled ~ .control__indicator:after {
+      border-color: #7b7b7b;
+    }

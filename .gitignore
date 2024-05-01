@@ -1,0 +1,23 @@
+dataSource.properties
+pom.properties
+MANIFEST.MF
+META-INF/*
+.springBeans
+README.md
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/*
+target/*
